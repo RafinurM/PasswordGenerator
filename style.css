@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: gray;
+}
+
+.title {
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.content {
+    display: flex;
+
+}
+
+
+
+.main {
+    border: 3px solid black;
+    width: 400px;
+    height: 130px;
+    box-sizing: content-box;
+    padding: 15px;
+    background-color: #eee
+}
+
+.password_hard {
+    width: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 5px;
+    position: relative;
+    right: 25px;
+   
+}
+
+.block {
+    width: 20px;
+    height: 10px;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px;
+}
+
+.lowest {
+    background-color: rgb(42, 175, 42);
+}
+
+.middle {
+    background-color: yellow;
+}
+
+.hard {
+    background-color: orange;
+}
+
+.hardest {
+    background-color: red;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.generation {
+    margin-top: 15px;
+}
+
+.button_generation {
+    width: 110px;
+    height: 30px;
+    background-color: rgb(209, 227, 235);
+}
+
+.output_password {
+    height: 30px;
+    padding: 3px;
+    border: none;
+}
+
+.output_password:focus {
+    border: 1px dashed red;
+}
+
+.output_password {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+    font-size: large;
+}
+
+@media (max-width: 420px) {
+    .title {
+        font-size: 30px;
+    }
+
+
+    .main {
+        max-width: 270px;
+        height: 160px;
+    }
+
+    .generation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+}

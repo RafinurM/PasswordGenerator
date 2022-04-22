@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <h3 class="title">Генератор паролей</h3>
+    <div class="content">
+        <div class="main">
+            <div class="options">
+                <div>
+                    <label for="numbers_on_off">Включать цифры
+                        <input type="checkbox" name="numbers_on_off" id="numbers_on_off"></label>
+                </div>
+                <div><label for="symbols_on_off">Включать символы
+                        <input type="checkbox" name="symbols_on_off" id="symbols_on_off">
+                    </label></div>
+            </div>
+            <label class="password_length_text">Длина пароля:</label>
+            <input type="number" min="6" max="16" class="password_length" id="pass_len" value="6">(от 6 до 16)
+            <div class="generation">
+                <button class="button_generation" onclick="generate_password()">Сгенерировать!</button>
+                <label>
+                    <span class="out_password_style">Ваш пароль: </span><span class="output_password"
+                        id="out_pass"></span></label>
+            </div>
+        </div>
+        <div class="password_hard">
+            <div class="block hardest hidden"></div>
+            <div class="block hard hidden"></div>
+            <div class="block middle hidden"></div>
+            <div class="block lowest"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
