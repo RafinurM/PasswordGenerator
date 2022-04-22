@@ -33,7 +33,7 @@ function numbersChecked() {
     } else {
         characterList.length = 50;
         console.log(characterList.length);
-}
+    }
 }
 
 function getRandomInRange(min, max) {
@@ -42,12 +42,21 @@ function getRandomInRange(min, max) {
 
 function generate_password() {
     outputPassword = ' ';
+    length_check();
     createPass();
     colorCoding();
     document.getElementById('out_pass').innerHTML = outputPassword;
 
 }
 
+function length_check() {
+    const password_length = document.getElementById('pass_len').value;
+    if (password_length > 16) {
+        document.getElementById('pass_len').value = 16;
+    } else if (password_length <= 4) {
+        document.getElementById('pass_len').value = 5;
+    }
+}
 let hardest = document.querySelector('.hardest');
 let hard = document.querySelector('.hard');
 let middle = document.querySelector('.middle');
@@ -55,7 +64,7 @@ let middle = document.querySelector('.middle');
 
 function colorCoding() {
     const password_length = document.getElementById('pass_len').value;
-    if ((number_on_off.checked && symbols_on_off.checked && (password_length >= 8)) || password_length >= 15 ) {
+    if ((number_on_off.checked && symbols_on_off.checked && (password_length >= 8)) || password_length >= 15) {
         middle.classList.remove('hidden');
         hard.classList.remove('hidden');
         hardest.classList.remove('hidden');
